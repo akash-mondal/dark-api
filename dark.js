@@ -6,7 +6,7 @@ const app = express();
 
 // Increase the limit for request body size (e.g., 20MB)
 app.use(bodyParser.json({ limit: '20mb' }));
-
+const port = 3000; // Change this to the desired port
 app.post('/detectDarkPattern', async (req, res) => {
   try {
     const { base64_image } = req.body;
