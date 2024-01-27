@@ -1,0 +1,14 @@
+{
+  "name": "dark",
+  "version": "0.1",
+  "description": "VLM request to process screenshot of ecommerce website , catching any dark patterns",
+  "main": "dark.js",
+  "scripts": {
+    "start": "dark.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "body-parser": "^1.20.0",
+    "axios": "^1.2.1"
+  }
+}
