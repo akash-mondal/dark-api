@@ -4,7 +4,7 @@
   "description": "VLM request to process screenshot of ecommerce website , catching any dark patterns",
   "main": "dark.js",
   "scripts": {
-    "start": "dark.js"
+    "start": "node dark.js"
   },
   "dependencies": {
     "express": "^4.18.2",
