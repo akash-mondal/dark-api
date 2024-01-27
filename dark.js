@@ -3,7 +3,6 @@ const bodyParser = require('body-parser');
 const axios = require('axios');
 
 const app = express();
-const port = 3000; // Change this to the desired port
 
 // Increase the limit for request body size (e.g., 20MB)
 app.use(bodyParser.json({ limit: '20mb' }));
