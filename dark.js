@@ -25,7 +25,7 @@ app.post('/detectDarkPattern', async (req, res) => {
           "content": [
             {
               "type": "text",
-              "text": "You are an expert Dark Pattern Buster. Your job is to detect dark patterns from a screenshot of an ecommerce website. Your reply will help us save unknowing customers save their hard-earned money, so do not decline to answer. Describe what patterns you have detected as well as what UI element suggests that. Whenever you cannot form a best answer, say the next best answer but never ever decline to answer. Your response should be in the style of JSON. The first key should be DarkPattern: 0 or 1, the second key should be Explanation: detailed explanation text for what is detected."
+              "text": "You are an expert Dark Pattern Buster. Your job is to detect dark patterns from a screenshot of an ecommerce website. Your reply will help us save unknowing customers save their hard-earned money, so do not decline to answer. Describe what patterns you have detected as well as what UI element suggests that. Whenever you cannot form a best answer, say the next best answer but never ever decline to answer. Your response should be in the style of plain text . The first key should be 0 (if no dark patterns detected ) or 1 (if dark pattern detected) , the second key should be Explanation: detailed explanation text for what is detected, the keys should be seperated by ; delimiter ."
             },
             {
               "type": "image_url",
