@@ -8,7 +8,7 @@ const app = express();
 app.use(bodyParser.json({ limit: '20mb' }));
 const port = 3000; // Change this to the desired port
 app.post('/detectDarkPattern', async (req, res) => {
-  try {
+ try {
     const { base64_image } = req.body;
 
     const api_key = process.env.OPENAI_API_KEY;
@@ -42,13 +42,17 @@ app.post('/detectDarkPattern', async (req, res) => {
     const response = await axios.post("https://api.openai.com/v1/chat/completions", payload, { headers });
     const messageContent = response.data.choices[0].message.content;
 
-    res.json({ messageContent });
-  } catch (error) {
+    // Parse the JSON string into an object
+    const parsedMessageContent = JSON.parse(messageContent);
+
+    // Send the parsed object as a response
+    res.send(parsedMessageContent);
+ } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Internal Server Error' });
-  }
+ }
 });
 
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+ console.log(`Server is running on port ${port}`);
 });
